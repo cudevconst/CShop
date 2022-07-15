@@ -5,9 +5,12 @@ const User = require('../models/User');
 router.get('/', verifyToken, (req, res) => {
     const userId = req.userId;
     console.log(userId);
-    User.find({_id: userId})
+    User.findOne({_id: userId})
     .then(data => {
-        res.json(data);
+        // res.json(data);
+        const {password, ...other} = data._doc;
+        res.json({...other});
+        
     })
     .catch(err => {
         res.status(500).json();

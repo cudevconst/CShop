@@ -22,9 +22,9 @@ function login(data){
     .then(response => response.json())
     .then(data => {
         if(data.status){
-            createCookie("token", data.token, 1);
+            createCookie("token", data.token, 10);
             window.location.href = "/";
-            // console.log(data);
+            
             
         }
         else{
@@ -44,6 +44,7 @@ function createCookie(name,value,minutes) {
     }
     document.cookie = name+"="+value+expires+"; path=/";
 }
+
 
 
 

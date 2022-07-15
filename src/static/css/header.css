@@ -1,3 +1,7 @@
+*{
+    padding: 0;
+    margin: 0;
+}
 .header{
     width: 100%;
     margin: 0 auto;
@@ -5,4 +9,53 @@
 .test a{
     width: 40%;
     margin: 0 auto;
+}
+
+ul li{
+    list-style-type: none;
+}
+
+.user{
+    position: relative;
+    padding: 0 30px;
+    
+}
+.user button{
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    outline: none;
+}
+.user span{
+    color: #fff;
+}
+
+.more-user{
+    position: absolute;
+    background-color: #343a40;
+    z-index: 999;
+    margin-left: -20px;
+    padding: 20px 20px;
+    width: 100%;
+    
+}
+.more-user ul{
+
+    
+    margin: 0;
+    padding: 0;
+}
+
+.more-user li{
+    width: 100%;
+    padding-top: 20px;
+
+}
+.more-user a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.log-out{
+    cursor: pointer;
 }

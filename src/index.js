@@ -16,6 +16,7 @@ const productRouter = require('./routes/product');
 const cartRouter = require('./routes/cart');
 
 const appController = require('./controller/app');
+const userController = require('./controller/user')
 const productController = require('./controller/product');
 const cartController = require('./controller/cart');
 
@@ -69,6 +70,8 @@ app.use("/api/user", userRouter);
 //controller
 
 app.use("/", appController);
+
+app.use("/user", userController);
 
 app.use("/product", productController);
 
